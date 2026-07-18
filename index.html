@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CIANN BDAY</title>
+
+<!-- Google Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+
+<!-- CSS -->
+<link rel="stylesheet" href="styles.css">
+
+<!-- GSAP -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+<!-- Confetti -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+<!-- Fireworks -->
+<script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.x/dist/index.umd.js"></script>
+
+</head>
+
+<body>
+
+<audio id="bgMusic" loop>
+    <source src="assets/audio/birthday-song.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Animated Background -->
+<div id="background">
+
+    <div id="stars"></div>
+
+    <div id="gradient"></div>
+
+</div>
+
+<!-- ===================================================== -->
+<!-- LOADING SCREEN -->
+<!-- ===================================================== -->
+
+<section id="loadingPage" class="page active">
+
+    <div class="loading-content">
+
+        <h1>
+
+            just a min....
+
+        </h1>
+
+        <div class="loader"></div>
+
+    </div>
+
+</section>
+
+<!-- ===================================================== -->
+<!-- GIFT GAME -->
+<!-- ===================================================== -->
+
+<section id="giftPage" class="page">
+
+    <div class="glass">
+
+        <h1>
+
+            Happy Birthday MY LIL AMMACHI 💙
+
+        </h1>
+
+        <p>
+
+            I got something for you.
+
+            <br><br>
+
+            Catch the gift to begin!
+
+        </p>
+
+    </div>
+
+    <img
+
+        src="assets/images/brown gift.png"
+
+        id="gift"
+
+        draggable="false"
+
+        alt="Gift"
+
+    >
+
+    <div id="giftMessage">
+
+    </div>
+
+</section>
+
+
+
+<section id="cakePage" class="page">
+
+    <div class="glass">
+
+        <div id="cakeWrap">
+
+            <div class="candles">
+
+                <div class="candle"><div class="flame"></div></div>
+                <div class="candle"><div class="flame"></div></div>
+                <div class="candle"><div class="flame"></div></div>
+                <div class="candle"><div class="flame"></div></div>
+
+            </div>
+
+            <img
+
+                src="assets/images/cake.png"
+
+                id="cake"
+
+                alt="Cake"
+
+            >
+
+        </div>
+
+        <h2>
+        
+
+        <h2>
+
+            Before your surprise...
+
+        </h2>
+
+        <p>
+
+            Tap the cake after making your wish.
+
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ===================================================== -->
+<!-- SHOOTING STAR -->
+<!-- ===================================================== -->
+
+<section id="starPage" class="page">
+
+    <div class="glass">
+
+        <h1>
+
+            One More Thing...
+
+        </h1>
+
+        <p>
+
+            Catch the shooting star before it disappears.
+
+        </p>
+
+    </div>
+
+    <div id="shootingStar"></div>
+
+</section>
+
+<!-- ===================================================== -->
+<!-- HAPPY BIRTHDAY -->
+<!-- ===================================================== -->
+
+<section id="birthdayPage" class="page">
+
+    <div id="confettiContainer"></div>
+
+    <div class="birthdayText">
+
+        <h1>
+
+            Happy Birthday BBG
+
+        </h1>
+
+        <h2>
+
+            To the most goofy ass girl I know.
+
+        </h2>
+
+    </div>
+
+    <div id="balloons">
+
+        <div class="balloon blue"></div>
+
+        <div class="balloon white"></div>
+
+        <div class="balloon blue"></div>
+
+        <div class="balloon white"></div>
+
+        <div class="balloon blue"></div>
+
+        <div class="balloon white"></div>
+
+        <div class="balloon blue"></div>
+
+        <div class="balloon white"></div>
+
+    </div>
+
+</section>
+
+<!-- ===================================================== -->
+<!-- FLOWERS -->
+<!-- ===================================================== -->
+
+<section id="flowerPage" class="page">
+
+    <div id="petals"></div>
+
+    <div class="glass">
+
+        <h1>
+
+            Just For You 💙 (totally not blusing while i give them)
+
+        </h1>
+
+    </div>
+
+    <div id="flowerBouquet">
+
+        <img
+        src="assets/images/blue flower.png"
+        class="flower flower1">
+
+        <img
+        src="assets/images/white flower.png"
+        class="flower flower2">
+
+        <img
+        src="assets/images/blue flower.png"
+        class="flower flower3">
+
+        <img
+        src="assets/images/white flower.png"
+        class="flower flower4">
+
+        <img
+        src="assets/images/blue flower.png"
+        class="flower flower5">
+
+        <img
+        src="assets/images/white flower.png"
+        class="flower flower6">
+
+        <img
+        src="assets/images/blue flower.png"
+        class="flower flower7">
+
+        <img
+        src="assets/images/white flower.png"
+        class="flower flower8">
+
+    </div>
+
+    <p class="flowerMessage">
+
+
+        <br><br>
+
+        They may be virtual,
+
+        but the thought behind them is very real.
+
+    </p>
+
+</section>
+
+<!-- ===================================================== -->
+<!-- PHOTO GALLERY -->
+<!-- ===================================================== -->
+
+<section id="galleryPage" class="page">
+
+    <div class="gallery">
+
+        <h2 class="galleryTitle">
+            some goated photos 📸
+        </h2>
+
+        <!-- Camera Flash -->
+        <div id="cameraFlash"></div>
+
+        <!-- Photo appears here first -->
+        <div id="photoStage">
+
+            <img id="stagePhoto">
+
+            <p id="stageCaption"></p>
+
+        </div>
+
+        <!-- Final Polaroids -->
+        <div id="photoBoard">
+
+        </div>
+
+        <div id="cutiePie">
+
+            <p class="cutieLine">lowkey you're</p>
+
+            <div class="cutieRow">
+
+                <img src="assets/images/acute.png" alt="Acute angle" class="cutieImg">
+
+                <span class="cutieIe">ie</span>
+
+                <img src="assets/images/pi.png" alt="Pi symbol" class="cutieImg">
+
+            </div>
+
+        </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ===================================================== -->
+<!-- FINAL PAGE -->
+<!-- ===================================================== -->
+
+<section id="finalPage" class="page">
+
+    <div id="fireworks"></div>
+
+    <div class="glass finalCard">
+
+        <p>
+
+            Hope today brings you lots of happiness,
+            some pottery skills and shiii ton of memories.
+
+        </p>
+
+    </div>
+
+    <div id="unoContainer">
+
+        <p class="tapText">
+
+            Tap the card ❤️
+
+        </p>
+
+        <div id="unoCard">
+
+            <div class="cardInner">
+
+                <div class="cardFront">
+                    <img
+                    src="assets/images/uno-front.png"
+                    alt="UNO Card">
+                </div>
+                <div class="cardBack">
+                    <img
+                    src="assets/images/uno-back.png"
+                    alt="UNO Card">
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ===================================================== -->
+<!-- PERSONAL ENDING PAGE -->
+<!-- ===================================================== -->
+
+<section id="endingPage" class="page">
+
+    <div class="glass endingCard">
+
+        <p>That's all, birthday girl 💙</p>
+
+        <p>Thanks for putting up with my nonsense,<br>
+        sending random photos,<br>
+        and being the goofy ass person you are</p>
+
+        <p>I hope this little website made you smile</p>
+
+        <p>Hope you had an amazing birthday,<br>
+        eat good food,<br>
+        take more insane photos,<br>
+        and maybe...just maybe...let me win an argument once</p>
+
+        <p class="signOff">— your favourite headache 💙</p>
+
+    </div>
+
+</section>
+
+<!-- ===================================================== -->
+<!-- MOVIE CREDITS PAGE -->
+<!-- ===================================================== -->
+
+<section id="creditsPage" class="page">
+
+    <div id="creditsScroll">
+
+        <p class="creditRole">DIRECTOR</p>
+        <p class="creditName">Thomas</p>
+
+        <p class="creditRole">MAIN CHARACTER</p>
+        <p class="creditName">Ciann</p>
+
+        <p class="creditRole">POTTERY SKILLS</p>
+        <p class="creditName">404 Not Found</p>
+
+        <p class="creditRole">CHAOS GENERATORS</p>
+        <p class="creditName">Both of us</p>
+
+        <p class="creditRole">PROFESSIONAL MENACE</p>
+        <p class="creditName">Mostly Her</p>
+
+        <p class="creditRole">PHOTO COLLECTION</p>
+        <p class="creditName">100% Unhinged</p>
+
+        <p class="creditRole">MADE WITH</p>
+        <p class="creditName">Too much caffeine,<br>
+        zero sleep,<br>
+        and way too much time.</p>
+
+    </div>
+
+    <div id="bombPolaroid">
+
+        <img src="assets/photos/photo7.jpg" alt="Photo">
+
+        <p>KAA BOOOOMM!!!</p>
+
+    </div>
+
+</section>
+<script src="script.js"></script>
+</body>
+
+</html>
