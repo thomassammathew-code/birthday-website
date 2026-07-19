@@ -532,6 +532,13 @@ caption:"DAMN DAMN DAMN"
 
 let photoIndex = 0;
 
+[...photos.map(p => p.src), "assets/photos/photo7.jpg"].forEach(src => {
+
+    const preloadImg = new Image();
+    preloadImg.src = src;
+
+});
+
 function showGallery(){
 
     showPage(galleryPage);
