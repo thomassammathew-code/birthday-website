@@ -1162,7 +1162,6 @@ right:14%;
 #stagePhoto{
 
     width:520px;
-    max-width:70vw;
     max-height:70vh;
     border-radius:12px;
     object-fit:contain;
